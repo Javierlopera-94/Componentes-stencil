@@ -15,6 +15,12 @@
   --ui-button-border-radius: 8px;
 }
 
+.ppp {
+  .mdc-button {
+    background-color: red !important;
+  }
+}
+
 .mdc-button {
   width: auto;
   height: auto;
@@ -62,11 +68,5 @@
     &:not(:disabled) {
       color: var(--ui-button-text-color-secondary);
     }
-  }
-}
-
-:host([noicon]) {
-  .mdc-button .mdc-button__icon {
-    display: none;
   }
 }

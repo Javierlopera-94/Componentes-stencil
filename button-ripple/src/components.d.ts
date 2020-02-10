@@ -10,7 +10,9 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 
 export namespace Components {
-  interface ButtonZeplin {}
+  interface ButtonZeplin {
+    'icon': string;
+  }
   interface PpTextfield {
     /**
     * Ejemplo de prop
@@ -41,6 +43,7 @@ declare global {
 
 declare namespace LocalJSX {
   interface ButtonZeplin {
+    'icon'?: string;
     'onEventChange'?: (event: CustomEvent<any>) => void;
   }
   interface PpTextfield {
