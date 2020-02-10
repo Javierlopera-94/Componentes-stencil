@@ -1,0 +1,78 @@
+@import "@material/button/mdc-button";
+
+:host {
+  --ui-button-bg-color-primary: #ffcd00;
+  --ui-button-bg-color-disabled-primary: #f9e67e;
+  --ui-button-hover-color-primary: #dbb000;
+  --ui-button-text-color-primary: #000066;
+
+  --ui-button-bg-color-secondary: #666666;
+  --ui-button-bg-color-disabled-secondary: #f3f2f2;
+  --ui-button-hover-color-secondary: #333333;
+  --ui-button-text-color-secondary: #ffffff;
+
+  --ui-button-font-size: 16px;
+  --ui-button-border-radius: 8px;
+}
+
+.mdc-button {
+  width: auto;
+  height: auto;
+  min-height: 56px;
+  // display: block;
+  // margin: 20px auto;
+  font-size: var(--ui-button-font-size);
+  @include mdc-button-shape-radius(var(--ui-button-border-radius));
+}
+
+.mdc-button .mdc-button__icon {
+  width: 22px;
+  height: 22px;
+}
+.material-icons {
+  background-image: url("../../assets/icon-primary.png");
+}
+
+:host([primary]) {
+  .mdc-button {
+    @include mdc-button-container-fill-color(var(--ui-button-bg-color-primary));
+    &:hover {
+      background: var(--ui-button-hover-color-primary);
+    }
+
+    &:disabled {
+      background-color: var(--ui-button-bg-color-disabled-primary);
+    }
+
+    &:not(:disabled) {
+      color: var(--ui-button-text-color-primary);
+    }
+  }
+}
+
+:host([secondary]) {
+  .mdc-button {
+    @include mdc-button-container-fill-color(var(--ui-button-bg-color-secondary));
+    &:hover {
+      background: var(--ui-button-hover-color-secondary);
+    }
+
+    &:disabled {
+      background-color: var(--ui-button-bg-color-disabled-secondary);
+    }
+
+    &:not(:disabled) {
+      color: var(--ui-button-text-color-secondary);
+    }
+  }
+}
+
+:host([noicon]) {
+  .mdc-button .mdc-button__icon {
+    display: none;
+  }
+}
+
+// :host {
+//   display: block;
+// }

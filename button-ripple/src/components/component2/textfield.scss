@@ -1,0 +1,91 @@
+
+@import "@material/textfield/mdc-text-field";
+@import "@material/button/mdc-button";
+
+.username,
+.password {
+  display: block;
+  width: 300px;
+  margin: 20px auto;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 300px;
+    margin: auto;
+  }
+  
+  .button-container button {
+    margin: 3px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// /** Necesario importar el sass de la documentación */
+// @import '@material/textfield/mdc-text-field';
+
+// /** En el host se declaran las variables CSS que se come el componente y se declaran los valores fallback */
+// /** Dado que las variables CSS son siempre globales, deben ir prefijadas mediante notación BEM simplificada */
+// /**  */
+// :host {
+//   --ui-input-bg-color: lightgray;
+
+//   --ui-input-border-radius: 8px;
+
+//   --ui-input-line-color:  magenta;
+//   --ui-input-label-color: magenta;
+
+//   --ui-input-field-color-empty: darkslategray;
+//   --ui-input-field-color: darkslategray;
+
+//   --ui-input-error-color: red;
+//   --ui-input-valid-color: green;
+
+//   display: block;
+// }
+
+// /** Idealmente, se tratarán de usar los Mixin que hay expuestos en la documentación del componente */
+// .mdc-text-field {
+//   @include mdc-text-field-ink-color(var(--ui-input-field-color-empty));
+//   @include mdc-text-field-shape-radius(var(--ui-input-border-radius));
+//   @include mdc-text-field-bottom-line-color(var(--ui-input-line-color));
+//   @include mdc-text-field-fill-color(var(--ui-input-bg-color));
+//   @include mdc-text-field-line-ripple-color(var(--ui-input-line-color-ripple));
+//   @include mdc-text-field-label-color(var(--ui-input-label-color));
+
+//   &:hover:not(.mdc-text-field--focused) {
+//     @include mdc-text-field-bottom-line-color(var(--ui-input-line-color));
+//     @include mdc-text-field-label-color(var(--ui-input-field-color));
+//   }
+
+//   &.mdc-text-field--focused {
+//     @include mdc-text-field-label-color(var(--ui-input-label-color));
+//     @include mdc-text-field-ink-color(var(--ui-input-field-color));
+//   }
+
+//   &.mdc-text-field--invalid{
+//     @include mdc-text-field-label-color(var(--ui-input-error-color));
+//     @include mdc-text-field-bottom-line-color(var(--ui-input-error-color));
+//     @include mdc-text-field-line-ripple-color(var(--ui-input-error-color));
+//   }
+
+// }
+
