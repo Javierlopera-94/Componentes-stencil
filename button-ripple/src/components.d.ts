@@ -44,7 +44,7 @@ declare global {
 declare namespace LocalJSX {
   interface ButtonZeplin {
     'icon'?: string;
-    'onEventChange'?: (event: CustomEvent<any>) => void;
+    'onEventClick'?: (event: CustomEvent<any>) => void;
   }
   interface PpTextfield {
     /**

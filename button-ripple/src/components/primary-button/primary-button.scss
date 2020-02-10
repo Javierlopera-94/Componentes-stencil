@@ -1,72 +1,64 @@
 @import "@material/button/mdc-button";
 
-:host {
-  --ui-button-bg-color-primary: #ffcd00;
-  --ui-button-bg-color-disabled-primary: #f9e67e;
-  --ui-button-hover-color-primary: #dbb000;
-  --ui-button-text-color-primary: #000066;
+// ESTILOS GENERALES, REFACTOR
 
-  --ui-button-bg-color-secondary: #666666;
-  --ui-button-bg-color-disabled-secondary: #f3f2f2;
-  --ui-button-hover-color-secondary: #333333;
-  --ui-button-text-color-secondary: #ffffff;
-
-  --ui-button-font-size: 16px;
-  --ui-button-border-radius: 8px;
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/materialicons/v48/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format("woff2");
 }
 
-.ppp {
-  .mdc-button {
-    background-color: red !important;
-  }
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+}
+
+:host {
+  --ui-button-min-width: 12rem;
+  --ui-button-border-radius: 0.5rem;
+
+  --ui-button-bg-color: #ffffff;
+  --ui-button-bg-color-disabled: #f3f2f2;
+  --ui-button-hover-color: #cbcbcb;
+  --ui-button-text-color: #333333;
 }
 
 .mdc-button {
-  width: auto;
-  height: auto;
-  min-height: 56px;
-  font-size: var(--ui-button-font-size);
+  min-width: var(--ui-button-min-width);
+  font-size: 1rem;
+  height: 3.5rem;
   @include mdc-button-shape-radius(var(--ui-button-border-radius));
-}
-
-.mdc-button .mdc-button__icon {
-  width: 22px;
-  height: 22px;
-}
-.material-icons {
-  background-image: url("../../assets/icon-primary.png");
-}
-
-:host([primary]) {
-  .mdc-button {
-    @include mdc-button-container-fill-color(var(--ui-button-bg-color-primary));
-    &:hover {
-      background: var(--ui-button-hover-color-primary);
-    }
-
-    &:disabled {
-      background-color: var(--ui-button-bg-color-disabled-primary);
-    }
-
-    &:not(:disabled) {
-      color: var(--ui-button-text-color-primary);
-    }
+  @include mdc-button-container-fill-color(var(--ui-button-bg-color));
+  @include mdc-button-horizontal-padding(1.5rem);
+  @include mdc-button-outline-color(red);
+  &:hover {
+    background: var(--ui-button-hover-color);
   }
-}
 
-:host([secondary]) {
-  .mdc-button {
-    @include mdc-button-container-fill-color(var(--ui-button-bg-color-secondary));
-    &:hover {
-      background: var(--ui-button-hover-color-secondary);
-    }
+  &:disabled {
+    background-color: var(--ui-button-bg-color-disabled);
+  }
 
-    &:disabled {
-      background-color: var(--ui-button-bg-color-disabled-secondary);
-    }
+  &:not(:disabled) {
+    color: var(--ui-button-text-color);
+  }
 
-    &:not(:disabled) {
-      color: var(--ui-button-text-color-secondary);
+  .mdc-button__ripple {
+    &::after,
+    &::before {
+      background-color: white;
     }
   }
 }
