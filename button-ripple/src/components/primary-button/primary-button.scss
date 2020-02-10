@@ -19,8 +19,6 @@
   width: auto;
   height: auto;
   min-height: 56px;
-  // display: block;
-  // margin: 20px auto;
   font-size: var(--ui-button-font-size);
   @include mdc-button-shape-radius(var(--ui-button-border-radius));
 }
@@ -72,7 +70,3 @@
     display: none;
   }
 }
-
-// :host {
-//   display: block;
-// }

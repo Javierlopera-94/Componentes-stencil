@@ -40,7 +40,9 @@ declare global {
 }
 
 declare namespace LocalJSX {
-  interface ButtonZeplin {}
+  interface ButtonZeplin {
+    'onEventChange'?: (event: CustomEvent<any>) => void;
+  }
   interface PpTextfield {
     /**
     * Para levantar los eventos hacia arriba
