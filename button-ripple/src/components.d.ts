@@ -14,6 +14,7 @@ export namespace Components {
     'disabled': boolean;
     'iconAfter': string;
     'iconBefore': string;
+    'text': string;
   }
   interface PpTextfield {
     /**
@@ -48,6 +49,7 @@ declare namespace LocalJSX {
     'disabled'?: boolean;
     'iconAfter'?: string;
     'iconBefore'?: string;
+    'text'?: string;
   }
   interface PpTextfield {
     /**

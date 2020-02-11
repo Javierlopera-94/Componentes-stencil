@@ -3,25 +3,33 @@ import { action } from '@storybook/addon-actions';
 
 /** Test de accesibilidad: https://www.npmjs.com/package/@storybook/addon-a11y */
 import { withA11y } from '@storybook/addon-a11y';
-
-const componentButton = document.createElement('button-zeplin');
-
-// export default {
-//     title: 'prueba',
-//     component: componentButton,
-//     decorators: [],
-//     parameters: {}
-// }
-// export const Basic = () => <componentButton />;
-
-// export default {
-//     component: Button,
-//     title: 'Button',
-// };
+import { withKnobs, text, boolean, color, object, optionsKnob } from '@storybook/addon-knobs';
 
 export default {
-    title: 'Holaaa'
+    title: 'main-button',
+    decorators: [withA11y, withKnobs],
 };
+
+export const asTemplate = () => {
+    const el = document.createElement('div');
+
+    el.innerHTML = `
+        <button-zeplin
+            primary
+            iconBefore="control_point"
+        >
+        </button-zeplin>
+        Ejemplo fuera del boton
+    `.trim()
+
+    const $wcUiButton = el.querySelector('button-zeplin');
+    $wcUiButton.addEventListener('click', e => action('click')(e))
+
+    return el;
+
+};
+
+
 
 export const Hey = () => '<button-zeplin primary></button-zeplin>';
 

@@ -37,6 +37,11 @@
   --ui-button-border-color: transparent;
   --ui-button-border-color-disabled: none;
   --ui-button-border: transparent;
+
+  --ui-button-bg-color-sss: transparent;
+  --ui-button-color-text-sss: pink;
+  --ui-button-color-text-hover-sss: black;
+  --ui-button-color-text-disabled-sss: green;
 }
 
 :host([disabled]) {
@@ -73,6 +78,19 @@
     &::after,
     &::before {
       background-color: white;
+    }
+  }
+}
+
+:host([aaa], [bbb]) {
+  .mdc-button {
+    background-color: var(--ui-button-bg-color-sss);
+    color: var(--ui-button-color-text-sss);
+    &:hover {
+      color: var(--ui-button-color-text-hover-sss);
+    }
+    &:disabled {
+      color: var(--ui-button-color-text-disabled-sss);
     }
   }
 }

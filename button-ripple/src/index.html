@@ -65,11 +65,26 @@
       --ui-button-border-color-disabled: transparent;
     }
 
+    button-zeplin[aaa] {
+      --ui-button-bg-color-sss: transparent;
+      --ui-button-color-text-sss: #ffcd00;
+      --ui-button-color-text-hover-sss: #dbb000;
+      --ui-button-color-text-disabled-sss: #cbcbcb;
+    }
+
+    button-zeplin[bbb] {
+      --ui-button-bg-color-sss: transparent;
+      --ui-button-color-text-sss: #41414b;
+      --ui-button-color-text-hover-sss: #000042;
+      --ui-button-color-text-disabled-sss: #cbcbcb;
+    }
+
     .width100 {
       width: 100%;
       height: auto;
       float: left;
-      margin-top: 5%;
+      margin-top: 2%;
+      margin-bottom: 2%;
     }
 
     .width50 {
@@ -91,139 +106,163 @@
 
   <!-- <pp-textfield></pp-textfield> -->
   <div class="width100">
-    <div class="width25">
-      <button-zeplin id="button" primary></button-zeplin>
-    </div>
-    <div class="width25">
-      <button-zeplin secondary></button-zeplin>
-    </div>
-    <div class="width25">
-      <button-zeplin ghost></button-zeplin>
-    </div>
-    <div class="width25">
-      <button-zeplin></button-zeplin>
-    </div>
-
     <div class="width100">
       <div class="width25">
-        <button-zeplin primary></button-zeplin>
+        <button-zeplin id="button" primary text="PRIMARY BUTTON"></button-zeplin>
       </div>
       <div class="width25">
-        <button-zeplin secondary></button-zeplin>
+        <button-zeplin secondary text="PRIMARY BUTTON"></button-zeplin>
       </div>
       <div class="width25">
-        <button-zeplin ghost></button-zeplin>
+        <button-zeplin ghost text="SECONDARY BUTTON"></button-zeplin>
       </div>
       <div class="width25">
-        <button-zeplin></button-zeplin>
+        <button-zeplin text="SECONDARY BUTTON"></button-zeplin>
       </div>
     </div>
 
     <div class="width100">
       <div class="width25">
-        <button-zeplin disabled primary></button-zeplin>
+        <button-zeplin primary text="PRIMARY BUTTON"></button-zeplin>
       </div>
       <div class="width25">
-        <button-zeplin disabled secondary></button-zeplin>
+        <button-zeplin secondary text="PRIMARY BUTTON"></button-zeplin>
       </div>
       <div class="width25">
-        <button-zeplin disabled ghost></button-zeplin>
+        <button-zeplin ghost text="SECONDARY BUTTON"></button-zeplin>
       </div>
       <div class="width25">
-        <button-zeplin disabled></button-zeplin>
+        <button-zeplin text="SECONDARY BUTTON"></button-zeplin>
       </div>
     </div>
 
     <div class="width100">
       <div class="width25">
-        <button-zeplin primary iconBefore="control_point"></button-zeplin>
+        <button-zeplin disabled primary text="PRIMARY BUTTON"></button-zeplin>
       </div>
       <div class="width25">
-        <button-zeplin secondary iconBefore="control_point"></button-zeplin>
+        <button-zeplin disabled secondary text="PRIMARY BUTTON"></button-zeplin>
       </div>
       <div class="width25">
-        <button-zeplin ghost iconBefore="control_point"></button-zeplin>
+        <button-zeplin disabled ghost text="SECONDARY BUTTON"></button-zeplin>
       </div>
       <div class="width25">
-        <button-zeplin iconBefore="control_point"></button-zeplin>
+        <button-zeplin disabled text="SECONDARY BUTTON"></button-zeplin>
       </div>
+    </div>
 
+    <div class="width100">
       <div class="width100">
         <div class="width25">
-          <button-zeplin primary iconBefore="control_point"></button-zeplin>
+          <button-zeplin primary icon-before="control_point" text="SPECIAL BUTTON"></button-zeplin>
         </div>
         <div class="width25">
-          <button-zeplin secondary iconBefore="control_point"></button-zeplin>
+          <button-zeplin secondary icon-before="control_point" text="SPECIAL BUTTON"></button-zeplin>
         </div>
         <div class="width25">
-          <button-zeplin ghost iconBefore="control_point"></button-zeplin>
+          <button-zeplin ghost icon-before="control_point" text="SPECIAL BUTTON"></button-zeplin>
         </div>
         <div class="width25">
-          <button-zeplin iconBefore="control_point"></button-zeplin>
-        </div>
-      </div>
-
-      <div class="width100">
-        <div class="width25">
-          <button-zeplin disabled primary iconBefore="control_point"></button-zeplin>
-        </div>
-        <div class="width25">
-          <button-zeplin disabled secondary iconBefore="control_point"></button-zeplin>
-        </div>
-        <div class="width25">
-          <button-zeplin disabled ghost iconBefore="control_point"></button-zeplin>
-        </div>
-        <div class="width25">
-          <button-zeplin disabled iconBefore="control_point"></button-zeplin>
+          <button-zeplin icon-before="control_point" text="SPECIAL BUTTON"></button-zeplin>
         </div>
       </div>
 
       <div class="width100">
         <div class="width25">
-          <button-zeplin primary iconAfter="exit_to_app"></button-zeplin>
+          <button-zeplin primary icon-before="control_point" text="SPECIAL BUTTON"></button-zeplin>
         </div>
         <div class="width25">
-          <button-zeplin secondary iconAfter="exit_to_app"></button-zeplin>
+          <button-zeplin secondary icon-before="control_point" text="SPECIAL BUTTON"></button-zeplin>
         </div>
         <div class="width25">
-          <button-zeplin ghost iconAfter="exit_to_app"></button-zeplin>
+          <button-zeplin ghost icon-before="control_point" text="SPECIAL BUTTON"></button-zeplin>
         </div>
         <div class="width25">
-          <button-zeplin iconAfter="exit_to_app"></button-zeplin>
+          <button-zeplin icon-before="control_point" text="SPECIAL BUTTON"></button-zeplin>
         </div>
-  
+      </div>
+
+      <div class="width100">
+        <div class="width25">
+          <button-zeplin disabled primary icon-before="control_point" text="PRIMARY BUTTON"></button-zeplin>
+        </div>
+        <div class="width25">
+          <button-zeplin disabled secondary icon-before="control_point" text="PRIMARY BUTTON"></button-zeplin>
+        </div>
+        <div class="width25">
+          <button-zeplin disabled ghost icon-before="control_point" text="TEXT BUTTON"></button-zeplin>
+        </div>
+        <div class="width25">
+          <button-zeplin disabled icon-before="control_point" text="TEXT BUTTON"></button-zeplin>
+        </div>
+      </div>
+
+      <div class="width100">
         <div class="width100">
           <div class="width25">
-            <button-zeplin primary iconAfter="exit_to_app"></button-zeplin>
+            <button-zeplin primary icon-after="exit_to_app" text="PRIMARY BUTTON"></button-zeplin>
           </div>
           <div class="width25">
-            <button-zeplin secondary iconAfter="exit_to_app"></button-zeplin>
+            <button-zeplin secondary icon-after="exit_to_app" text="PRIMARY BUTTON"></button-zeplin>
           </div>
           <div class="width25">
-            <button-zeplin ghost iconAfter="exit_to_app"></button-zeplin>
+            <button-zeplin ghost icon-after="exit_to_app" text="TEXT BUTTON"></button-zeplin>
           </div>
           <div class="width25">
-            <button-zeplin iconAfter="exit_to_app"></button-zeplin>
+            <button-zeplin icon-after="exit_to_app" text="TEXT BUTTON"></button-zeplin>
           </div>
         </div>
-  
+
         <div class="width100">
           <div class="width25">
-            <button-zeplin disabled primary iconAfter="exit_to_app"></button-zeplin>
+            <button-zeplin primary icon-after="exit_to_app" text="PRIMARY BUTTON"></button-zeplin>
           </div>
           <div class="width25">
-            <button-zeplin disabled secondary iconAfter="exit_to_app"></button-zeplin>
+            <button-zeplin secondary icon-after="exit_to_app" text="PRIMARY BUTTON"></button-zeplin>
           </div>
           <div class="width25">
-            <button-zeplin disabled ghost iconAfter="exit_to_app"></button-zeplin>
+            <button-zeplin ghost icon-after="exit_to_app" text="TEXT BUTTON"></button-zeplin>
           </div>
           <div class="width25">
-            <button-zeplin disabled iconAfter="exit_to_app"></button-zeplin>
+            <button-zeplin icon-after="exit_to_app" text="TEXT BUTTON"></button-zeplin>
           </div>
         </div>
-    </div>
 
-    <script>
+        <div class="width100">
+          <div class="width25">
+            <button-zeplin disabled primary icon-after="exit_to_app" text="PRIMARY BUTTON"></button-zeplin>
+          </div>
+          <div class="width25">
+            <button-zeplin disabled secondary icon-after="exit_to_app" text="PRIMARY BUTTON"></button-zeplin>
+          </div>
+          <div class="width25">
+            <button-zeplin disabled ghost icon-after="exit_to_app" text="TEXT BUTTON"></button-zeplin>
+          </div>
+          <div class="width25">
+            <button-zeplin disabled icon-after="exit_to_app" text="TEXT BUTTON"></button-zeplin>
+          </div>
+        </div>
+      </div>
+      <div class="width100">
+        <div class="width100">
+          <div class="width25">
+            <button-zeplin id="button" aaa primary text="PRIMARY BUTTON" icon-after="exit_to_app"></button-zeplin>
+          </div>
+          <div class="width25">
+            <button-zeplin disabled id="button" aaa primary text="PRIMARY BUTTON" icon-after="exit_to_app">
+            </button-zeplin>
+          </div>
+          <div class="width25">
+            <button-zeplin id="button" bbb primary text="PRIMARY BUTTON" icon-after="exit_to_app"></button-zeplin>
+          </div>
+          <div class="width25">
+            <button-zeplin disabled id="button" bbb primary text="PRIMARY BUTTON" icon-after="exit_to_app">
+            </button-zeplin>
+          </div>
+        </div>
+      </div>
+
+      <script>
       // var $button = document.querySelector('#button')
       // console.log($button)
       // $button.addEventListener('click', function () {
@@ -231,7 +270,7 @@
       // })
       // document.addEventListener('DOMContentLoaded', function () {
       // })
-    </script>
+      </script>
 
 </body>
 

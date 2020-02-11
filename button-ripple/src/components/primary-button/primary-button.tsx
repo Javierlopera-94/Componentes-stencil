@@ -7,8 +7,10 @@ import { MDCRipple } from '@material/ripple';
   shadow: true
 })
 export class Zeplin {
+
+  @Prop() text: string;
   @Prop() iconBefore: string;
-  @Prop() iconAfter: string;
+  @Prop() iconAfter: string ;
   @Prop() disabled: boolean;
 
   rippleButtonElement!: HTMLButtonElement;
@@ -26,7 +28,7 @@ export class Zeplin {
         <button disabled={this.disabled} class="mdc-button" ref={el => this.rippleButtonElement = el as HTMLButtonElement}>
           <div class="mdc-button__ripple"></div>
           {this.iconBefore && <i class="material-icons mdc-button__icon" aria-hidden="true">{this.iconBefore}</i>}
-          <span class="mdc-button__label">Text Button</span>
+          <span class="mdc-button__label">{this.text}</span>
           {this.iconAfter && <i class="material-icons mdc-button__icon" aria-hidden="true">{this.iconAfter}</i>}
         </button>
       </div>
