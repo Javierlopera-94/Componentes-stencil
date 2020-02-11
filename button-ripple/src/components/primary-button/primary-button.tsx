@@ -25,7 +25,7 @@ export class Zeplin {
         <button disabled={this.disabled} class="mdc-button" ref={el => this.rippleButtonElement = el as HTMLButtonElement}>
           <div class="mdc-button__ripple"></div>
           {this.iconBefore && <i class="material-icons mdc-button__icon" aria-hidden="true">{this.iconBefore}</i>}
-          <span class="mdc-button__label">{this.text}</span>
+          <span class="mdc-button__label"><slot /></span>
           {this.iconAfter && <i class="material-icons mdc-button__icon" aria-hidden="true">{this.iconAfter}</i>}
         </button>
       </div>
