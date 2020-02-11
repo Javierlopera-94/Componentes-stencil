@@ -12,7 +12,8 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 export namespace Components {
   interface ButtonZeplin {
     'disabled': boolean;
-    'icon': string;
+    'iconAfter': string;
+    'iconBefore': string;
   }
   interface PpTextfield {
     /**
@@ -45,7 +46,8 @@ declare global {
 declare namespace LocalJSX {
   interface ButtonZeplin {
     'disabled'?: boolean;
-    'icon'?: string;
+    'iconAfter'?: string;
+    'iconBefore'?: string;
   }
   interface PpTextfield {
     /**
