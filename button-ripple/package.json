@@ -32,12 +32,14 @@
   "license": "MIT",
   "dependencies": {
     "@material/button": "^4.0.0",
+    "@material/fab": "^4.0.0",
     "@material/ripple": "^4.0.0",
     "@material/textfield": "^4.0.0",
     "@stencil/sass": "^1.1.1",
     "@storybook/addon-a11y": "^5.3.12",
     "@storybook/addon-actions": "^5.3.12",
     "@storybook/addon-knobs": "^5.3.12",
-    "@storybook/addon-notes": "^5.3.12"
+    "@storybook/addon-notes": "^5.3.12",
+    "@types/jest": "^25.1.2"
   }
 }

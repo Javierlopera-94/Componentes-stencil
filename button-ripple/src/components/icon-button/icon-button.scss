@@ -1,0 +1,45 @@
+@import "@material/fab/mdc-fab";
+
+// ESTILOS GENERALES, REFACTOR
+
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/materialicons/v48/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format("woff2");
+}
+
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+}
+
+:host {
+  --ui-floatin-buttton-bg-color: magenta;
+  --ui-floatin-buttton-bg-color-hover: green;
+  --ui-floatin-buttton-bg-color-disabled: gray;
+  --ui-floatin-buttton-icon-bg-color: red;
+  --ui-floatin-buttton-icon-bg-color-disabled: red;
+}
+
+.mdc-fab {
+  @include mdc-fab-container-color(var(--ui-floatin-buttton-bg-color));
+  @include mdc-fab-ink-color(var(--ui-floatin-buttton-icon-bg-color)); // cambia el color del icono
+  &:hover {
+    @include mdc-fab-container-color(var(--ui-floatin-buttton-bg-color-hover));
+  }
+  &:disabled {
+    @include mdc-fab-container-color(var(--ui-floatin-buttton-bg-color-disabled));
+  }
+}

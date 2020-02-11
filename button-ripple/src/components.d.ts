@@ -16,6 +16,7 @@ export namespace Components {
     'iconBefore': string;
     'text': string;
   }
+  interface IconButton {}
   interface PpTextfield {
     /**
     * Ejemplo de prop
@@ -33,6 +34,12 @@ declare global {
     new (): HTMLButtonZeplinElement;
   };
 
+  interface HTMLIconButtonElement extends Components.IconButton, HTMLStencilElement {}
+  var HTMLIconButtonElement: {
+    prototype: HTMLIconButtonElement;
+    new (): HTMLIconButtonElement;
+  };
+
   interface HTMLPpTextfieldElement extends Components.PpTextfield, HTMLStencilElement {}
   var HTMLPpTextfieldElement: {
     prototype: HTMLPpTextfieldElement;
@@ -40,6 +47,7 @@ declare global {
   };
   interface HTMLElementTagNameMap {
     'button-zeplin': HTMLButtonZeplinElement;
+    'icon-button': HTMLIconButtonElement;
     'pp-textfield': HTMLPpTextfieldElement;
   }
 }
@@ -51,6 +59,7 @@ declare namespace LocalJSX {
     'iconBefore'?: string;
     'text'?: string;
   }
+  interface IconButton {}
   interface PpTextfield {
     /**
     * Para levantar los eventos hacia arriba
@@ -64,6 +73,7 @@ declare namespace LocalJSX {
 
   interface IntrinsicElements {
     'button-zeplin': ButtonZeplin;
+    'icon-button': IconButton;
     'pp-textfield': PpTextfield;
   }
 }
@@ -75,6 +85,7 @@ declare module "@stencil/core" {
   export namespace JSX {
     interface IntrinsicElements {
       'button-zeplin': LocalJSX.ButtonZeplin & JSXBase.HTMLAttributes<HTMLButtonZeplinElement>;
+      'icon-button': LocalJSX.IconButton & JSXBase.HTMLAttributes<HTMLIconButtonElement>;
       'pp-textfield': LocalJSX.PpTextfield & JSXBase.HTMLAttributes<HTMLPpTextfieldElement>;
     }
   }

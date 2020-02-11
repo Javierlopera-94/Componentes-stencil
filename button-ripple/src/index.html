@@ -23,6 +23,9 @@
     :root {
       --theme-color-primary: #ffcd00;
     }
+    .ppp {
+      margin-left: 5%;
+    }
 
     button-zeplin {
       --ui-button-bg-color: #ffffff;
@@ -79,6 +82,38 @@
       --ui-button-color-text-disabled-text-button: #cbcbcb;
     }
 
+    icon-button {
+      --ui-floatin-buttton-bg-color: #ffffff;
+      --ui-floatin-buttton-bg-color-hover: #cbcbcb;
+      --ui-floatin-buttton-bg-color-disabled: gray;
+      --ui-floatin-buttton-icon-bg-color: #333333;
+      --ui-floatin-buttton-icon-bg-color-disabled: #666666;
+    }
+
+    icon-button[primary] {
+      --ui-floatin-buttton-bg-color: #ffcd00;
+      --ui-floatin-buttton-bg-color-hover: #dbb000;
+      --ui-floatin-buttton-bg-color-disabled: #f3f2f2;
+      --ui-floatin-buttton-icon-bg-color: #000066;
+      --ui-floatin-buttton-icon-bg-color-disabled: #666666;
+    }
+
+    icon-button[secondary] {
+      --ui-floatin-buttton-bg-color: #000066;
+      --ui-floatin-buttton-bg-color-hover: #000042;
+      --ui-floatin-buttton-bg-color-disabled: #f3f2f2;
+      --ui-floatin-buttton-icon-bg-color: #ffffff;
+      --ui-floatin-buttton-icon-bg-color-disabled: #666666;
+    }
+
+    icon-button[ghost] {
+      --ui-floatin-buttton-bg-color: #666666;
+      --ui-floatin-buttton-bg-color-hover: #333333;
+      --ui-floatin-buttton-bg-color-disabled: #f3f2f2;
+      --ui-floatin-buttton-icon-bg-color: #ffffff;
+      --ui-floatin-buttton-icon-bg-color-disabled: #666666;
+    }
+
     .width100 {
       width: 100%;
       height: auto;
@@ -106,7 +141,7 @@
 
   <!-- <pp-textfield></pp-textfield> -->
   <div class="width100">
-    <div class="width100">
+    <!-- <div class="width100">
       <div class="width25">
         <button-zeplin id="button" primary >
           PRIMARY BUTTON
@@ -333,10 +368,27 @@
               TEXT BUTTON
             </button-zeplin>
           </div>
-        </div>
+        </div> -->
+    <div class="width100 ppp">
+      <div class="width25">
+        <icon-button></icon-button>
       </div>
+      <div class="width25">
+        <icon-button primary></icon-button>
 
-      <script>
+      </div>
+      <div class="width25">
+        <icon-button secondary></icon-button>
+
+      </div>
+      <div class="width25">
+        <icon-button ghost></icon-button>
+
+      </div>
+    </div>
+  </div>
+
+  <script>
       // var $button = document.querySelector('#button')
       // console.log($button)
       // $button.addEventListener('click', function () {
@@ -344,7 +396,7 @@
       // })
       // document.addEventListener('DOMContentLoaded', function () {
       // })
-      </script>
+  </script>
 
 </body>
 
