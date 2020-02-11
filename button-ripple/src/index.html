@@ -24,16 +24,15 @@
       --theme-color-primary: #ffcd00;
     }
 
-    .displayb {
-      display: inline-block;
-    }
-
     button-zeplin {
       --ui-button-bg-color: #ffffff;
       --ui-button-bg-color-disabled: #f3f2f2;
       --ui-button-hover-color: #cbcbcb;
       --ui-button-text-color: #333333;
-
+      --ui-button-border-color: red;
+      --ui-button-border-color: #cbcbcb;
+      --ui-button-border: solid 0.0625rem;
+      --ui-button-border-color-disabled: solid 1px #ffffff;
     }
 
     button-zeplin[primary] {
@@ -41,13 +40,19 @@
       --ui-button-bg-color-disabled: #f3f2f2;
       --ui-button-hover-color: #dbb000;
       --ui-button-text-color: #000066;
+      --ui-button-border-color: transparent;
+      --ui-button-border: none;
+      --ui-button-border-color-disabled: transparent;
     }
 
     button-zeplin[secondary] {
       --ui-button-bg-color: #000066;
-      --ui-button-bg-color-disabled: #666666;
+      --ui-button-bg-color-disabled: #f3f2f2;
       --ui-button-hover-color: #000042;
       --ui-button-text-color: #ffffff;
+      --ui-button-border-color: transparent;
+      --ui-button-border: none;
+      --ui-button-border-color-disabled: transparent;
     }
 
     button-zeplin[ghost] {
@@ -55,6 +60,28 @@
       --ui-button-bg-color-disabled: #f3f2f2;
       --ui-button-hover-color: #333333;
       --ui-button-text-color: #ffffff;
+      --ui-button-border-color: transparent;
+      --ui-button-border: none;
+      --ui-button-border-color-disabled: transparent;
+    }
+
+    .width100 {
+      width: 100%;
+      height: auto;
+      float: left;
+      margin-top: 5%;
+    }
+
+    .width50 {
+      width: 49%;
+      height: auto;
+      float: left;
+    }
+
+    .width25 {
+      width: 25%;
+      height: auto;
+      float: left;
     }
   </style>
 
@@ -62,30 +89,105 @@
 
 <body>
 
-
   <!-- <pp-textfield></pp-textfield> -->
-  <div class="displayb">
-    <button-zeplin id="button" primary ></button-zeplin>
-    <button-zeplin id="button" secondary ></button-zeplin>
-    <button-zeplin id="button" ghost ></button-zeplin>
-    <button-zeplin ></button-zeplin>
-  </div>
-  <div class="displayb">
-    <button-zeplin id="button" primary icon="control_point"></button-zeplin>
-    <button-zeplin id="button" secondary icon="control_point"></button-zeplin>
-    <button-zeplin id="button" ghost icon="control_point"></button-zeplin>
-    <button-zeplin icon="control_point"></button-zeplin>
-  </div>
+  <div class="width100">
+    <div class="width25">
+      <button-zeplin id="button" primary></button-zeplin>
+    </div>
+    <div class="width25">
+      <button-zeplin id="button" secondary></button-zeplin>
+    </div>
+    <div class="width25">
+      <button-zeplin id="button" ghost></button-zeplin>
+    </div>
+    <div class="width25">
+      <button-zeplin></button-zeplin>
+    </div>
 
-  <script>
-    var $button = document.querySelector('#button')
-    console.log($button)
-    $button.addEventListener('click', function () {
-      console.log('test')
-    })
-    document.addEventListener('DOMContentLoaded', function () {
-    })
-  </script>
+    <div class="width100">
+      <div class="width25">
+        <button-zeplin id="button" primary icon="control_point"></button-zeplin>
+      </div>
+      <div class="width25">
+        <button-zeplin id="button" secondary icon="control_point"></button-zeplin>
+      </div>
+      <div class="width25">
+        <button-zeplin id="button" ghost icon="control_point"></button-zeplin>
+      </div>
+      <div class="width25">
+        <button-zeplin icon="control_point"></button-zeplin>
+      </div>
+    </div>
+
+    <div class="width100">
+      <div class="width25">
+        <button-zeplin disabled id="button" primary icon="control_point"></button-zeplin>
+      </div>
+      <div class="width25">
+        <button-zeplin disabled id="button" secondary icon="control_point"></button-zeplin>
+      </div>
+      <div class="width25">
+        <button-zeplin disabled id="button" ghost icon="control_point"></button-zeplin>
+      </div>
+      <div class="width25">
+        <button-zeplin disabled icon="control_point"></button-zeplin>
+      </div>
+    </div>
+
+    <div class="width100">
+      <div class="width25">
+        <button-zeplin id="button" primary></button-zeplin>
+      </div>
+      <div class="width25">
+        <button-zeplin id="button" secondary></button-zeplin>
+      </div>
+      <div class="width25">
+        <button-zeplin id="button" ghost></button-zeplin>
+      </div>
+      <div class="width25">
+        <button-zeplin></button-zeplin>
+      </div>
+
+      <div class="width100">
+        <div class="width25">
+          <button-zeplin id="button" primary icon="control_point"></button-zeplin>
+        </div>
+        <div class="width25">
+          <button-zeplin id="button" secondary icon="control_point"></button-zeplin>
+        </div>
+        <div class="width25">
+          <button-zeplin id="button" ghost icon="control_point"></button-zeplin>
+        </div>
+        <div class="width25">
+          <button-zeplin icon="control_point"></button-zeplin>
+        </div>
+      </div>
+
+      <div class="width100">
+        <div class="width25">
+          <button-zeplin disabled id="button" primary icon="control_point"></button-zeplin>
+        </div>
+        <div class="width25">
+          <button-zeplin disabled id="button" secondary icon="control_point"></button-zeplin>
+        </div>
+        <div class="width25">
+          <button-zeplin disabled id="button" ghost icon="control_point"></button-zeplin>
+        </div>
+        <div class="width25">
+          <button-zeplin disabled icon="control_point"></button-zeplin>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var $button = document.querySelector('#button')
+      console.log($button)
+      $button.addEventListener('click', function () {
+        console.log('test')
+      })
+      document.addEventListener('DOMContentLoaded', function () {
+      })
+    </script>
 
 </body>
 

@@ -11,6 +11,7 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 export namespace Components {
   interface ButtonZeplin {
+    'disabled': boolean;
     'icon': string;
   }
   interface PpTextfield {
@@ -43,8 +44,8 @@ declare global {
 
 declare namespace LocalJSX {
   interface ButtonZeplin {
+    'disabled'?: boolean;
     'icon'?: string;
-    'onEventClick'?: (event: CustomEvent<any>) => void;
   }
   interface PpTextfield {
     /**

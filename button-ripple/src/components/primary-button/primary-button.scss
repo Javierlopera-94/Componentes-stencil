@@ -29,26 +29,40 @@
   --ui-button-min-width: 12rem;
   --ui-button-border-radius: 0.5rem;
 
-  --ui-button-bg-color: #ffffff;
-  --ui-button-bg-color-disabled: #f3f2f2;
-  --ui-button-hover-color: #cbcbcb;
-  --ui-button-text-color: #333333;
+  --ui-button-bg-color: magenta;
+  --ui-button-bg-color-disabled: gray;
+  --ui-button-hover-color: green;
+  --ui-button-text-color: white;
+
+  --ui-button-border-color: transparent;
+  --ui-button-border-color-disabled: none;
+  --ui-button-border: transparent;
+}
+
+:host([disabled]) {
+  pointer-events: none;
 }
 
 .mdc-button {
   min-width: var(--ui-button-min-width);
   font-size: 1rem;
   height: 3.5rem;
+
+  @include mdc-button-outline-color(var(--ui-button-border-color));
+  border: var(--ui-button-border);
+
   @include mdc-button-shape-radius(var(--ui-button-border-radius));
   @include mdc-button-container-fill-color(var(--ui-button-bg-color));
   @include mdc-button-horizontal-padding(1.5rem);
-  @include mdc-button-outline-color(red);
+
   &:hover {
     background: var(--ui-button-hover-color);
+    border: none;
   }
 
   &:disabled {
     background-color: var(--ui-button-bg-color-disabled);
+    border: var(--ui-button-border-color-disabled);
   }
 
   &:not(:disabled) {
@@ -62,3 +76,18 @@
     }
   }
 }
+
+// :host {
+//   .mdc-button {
+//     @include mdc-button-outline-color(#cbcbcb);
+//     border: solid 1px;
+
+//     &:hover {
+//       border: none;
+//     }
+
+//     &:disabled {
+//       border: solid 1px #ffffff;
+//     }
+//   }
+// }
