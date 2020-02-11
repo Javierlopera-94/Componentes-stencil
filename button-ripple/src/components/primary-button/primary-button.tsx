@@ -15,7 +15,6 @@ export class Zeplin {
 
   rippleButtonElement!: HTMLButtonElement;
 
-
   componentDidLoad() {
     new MDCRipple(this.rippleButtonElement);
   }

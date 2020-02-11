@@ -31,7 +31,7 @@
 
   --ui-button-bg-color: magenta;
   --ui-button-bg-color-disabled: gray;
-  --ui-button-hover-color: green;
+  --ui-button-bg-color-hover: green;
   --ui-button-text-color: white;
 
   --ui-button-border-color: transparent;
@@ -52,16 +52,15 @@
   min-width: var(--ui-button-min-width);
   font-size: 1rem;
   height: 3.5rem;
-
-  @include mdc-button-outline-color(var(--ui-button-border-color));
   border: var(--ui-button-border);
 
+  @include mdc-button-outline-color(var(--ui-button-border-color));
   @include mdc-button-shape-radius(var(--ui-button-border-radius));
   @include mdc-button-container-fill-color(var(--ui-button-bg-color));
   @include mdc-button-horizontal-padding(1.5rem);
 
   &:hover {
-    background: var(--ui-button-hover-color);
+    background: var(--ui-button-bg-color-hover);
     border: none;
   }
 
@@ -94,18 +93,3 @@
     }
   }
 }
-
-// :host {
-//   .mdc-button {
-//     @include mdc-button-outline-color(#cbcbcb);
-//     border: solid 1px;
-
-//     &:hover {
-//       border: none;
-//     }
-
-//     &:disabled {
-//       border: solid 1px #ffffff;
-//     }
-//   }
-// }
