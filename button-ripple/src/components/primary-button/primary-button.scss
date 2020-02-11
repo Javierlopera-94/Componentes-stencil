@@ -38,10 +38,10 @@
   --ui-button-border-color-disabled: none;
   --ui-button-border: transparent;
 
-  --ui-button-bg-color-sss: transparent;
-  --ui-button-color-text-sss: pink;
-  --ui-button-color-text-hover-sss: black;
-  --ui-button-color-text-disabled-sss: green;
+  --ui-button-bg-color-text-button: transparent;
+  --ui-button-color-text-text-button: pink;
+  --ui-button-color-text-hover-text-button: black;
+  --ui-button-color-text-disabled-text-button: green;
 }
 
 :host([disabled]) {
@@ -82,15 +82,15 @@
   }
 }
 
-:host([aaa], [bbb]) {
+:host([alpha], [beta]) {
   .mdc-button {
-    background-color: var(--ui-button-bg-color-sss);
-    color: var(--ui-button-color-text-sss);
+    background-color: var(--ui-button-bg-color-text-button);
+    color: var(--ui-button-color-text-text-button);
     &:hover {
-      color: var(--ui-button-color-text-hover-sss);
+      color: var(--ui-button-color-text-hover-text-button);
     }
     &:disabled {
-      color: var(--ui-button-color-text-disabled-sss);
+      color: var(--ui-button-color-text-disabled-text-button);
     }
   }
 }

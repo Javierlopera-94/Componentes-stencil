@@ -18,8 +18,6 @@ export class Zeplin {
 
   componentDidLoad() {
     new MDCRipple(this.rippleButtonElement);
-    console.log(this.iconAfter);
-    console.log(this.iconBefore);
   }
 
   render() {
