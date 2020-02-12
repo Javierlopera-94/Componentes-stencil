@@ -16,6 +16,7 @@ export namespace Components {
     'iconBefore': string;
     'text': string;
   }
+  interface DirectAccess {}
   interface IconButton {
     'ariaLabel': string;
   }
@@ -36,6 +37,12 @@ declare global {
     new (): HTMLButtonZeplinElement;
   };
 
+  interface HTMLDirectAccessElement extends Components.DirectAccess, HTMLStencilElement {}
+  var HTMLDirectAccessElement: {
+    prototype: HTMLDirectAccessElement;
+    new (): HTMLDirectAccessElement;
+  };
+
   interface HTMLIconButtonElement extends Components.IconButton, HTMLStencilElement {}
   var HTMLIconButtonElement: {
     prototype: HTMLIconButtonElement;
@@ -49,6 +56,7 @@ declare global {
   };
   interface HTMLElementTagNameMap {
     'button-zeplin': HTMLButtonZeplinElement;
+    'direct-access': HTMLDirectAccessElement;
     'icon-button': HTMLIconButtonElement;
     'pp-textfield': HTMLPpTextfieldElement;
   }
@@ -61,6 +69,7 @@ declare namespace LocalJSX {
     'iconBefore'?: string;
     'text'?: string;
   }
+  interface DirectAccess {}
   interface IconButton {
     'ariaLabel'?: string;
   }
@@ -77,6 +86,7 @@ declare namespace LocalJSX {
 
   interface IntrinsicElements {
     'button-zeplin': ButtonZeplin;
+    'direct-access': DirectAccess;
     'icon-button': IconButton;
     'pp-textfield': PpTextfield;
   }
@@ -89,6 +99,7 @@ declare module "@stencil/core" {
   export namespace JSX {
     interface IntrinsicElements {
       'button-zeplin': LocalJSX.ButtonZeplin & JSXBase.HTMLAttributes<HTMLButtonZeplinElement>;
+      'direct-access': LocalJSX.DirectAccess & JSXBase.HTMLAttributes<HTMLDirectAccessElement>;
       'icon-button': LocalJSX.IconButton & JSXBase.HTMLAttributes<HTMLIconButtonElement>;
       'pp-textfield': LocalJSX.PpTextfield & JSXBase.HTMLAttributes<HTMLPpTextfieldElement>;
     }
