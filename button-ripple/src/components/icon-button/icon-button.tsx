@@ -1,4 +1,4 @@
-import { Component, h } from '@stencil/core';
+import { Component, h, Prop } from '@stencil/core';
 import { MDCRipple } from '@material/ripple';
 
 @Component({
@@ -8,6 +8,8 @@ import { MDCRipple } from '@material/ripple';
 })
 export class Button {
 
+  @Prop() ariaLabel: string;
+
   rippleButtonElement!: HTMLButtonElement;
 
   componentDidLoad() {
@@ -16,9 +18,9 @@ export class Button {
 
   render() {
     return (
-      <button class="mdc-fab mdc-fab--mini" aria-label="Favorite" ref={el => this.rippleButtonElement = el as HTMLButtonElement}>
+      <button class="mdc-fab mdc-fab--mini" aria-label={this.ariaLabel} ref={el => this.rippleButtonElement = el as HTMLButtonElement}>
         <div class="mdc-fab__ripple"></div>
-        <span class="mdc-fab__icon material-icons">get_app</span>
+        <span class="mdc-fab__icon material-icons"><slot /></span>
       </button>
     );
   }

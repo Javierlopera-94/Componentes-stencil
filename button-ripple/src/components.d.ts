@@ -16,7 +16,9 @@ export namespace Components {
     'iconBefore': string;
     'text': string;
   }
-  interface IconButton {}
+  interface IconButton {
+    'ariaLabel': string;
+  }
   interface PpTextfield {
     /**
     * Ejemplo de prop
@@ -59,7 +61,9 @@ declare namespace LocalJSX {
     'iconBefore'?: string;
     'text'?: string;
   }
-  interface IconButton {}
+  interface IconButton {
+    'ariaLabel'?: string;
+  }
   interface PpTextfield {
     /**
     * Para levantar los eventos hacia arriba
