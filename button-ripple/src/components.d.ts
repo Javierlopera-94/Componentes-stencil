@@ -26,6 +26,7 @@ export namespace Components {
     */
     'value': string;
   }
+  interface TypeCard {}
 }
 
 declare global {
@@ -54,11 +55,18 @@ declare global {
     prototype: HTMLPpTextfieldElement;
     new (): HTMLPpTextfieldElement;
   };
+
+  interface HTMLTypeCardElement extends Components.TypeCard, HTMLStencilElement {}
+  var HTMLTypeCardElement: {
+    prototype: HTMLTypeCardElement;
+    new (): HTMLTypeCardElement;
+  };
   interface HTMLElementTagNameMap {
     'button-zeplin': HTMLButtonZeplinElement;
     'direct-access': HTMLDirectAccessElement;
     'icon-button': HTMLIconButtonElement;
     'pp-textfield': HTMLPpTextfieldElement;
+    'type-card': HTMLTypeCardElement;
   }
 }
 
@@ -83,12 +91,14 @@ declare namespace LocalJSX {
     */
     'value'?: string;
   }
+  interface TypeCard {}
 
   interface IntrinsicElements {
     'button-zeplin': ButtonZeplin;
     'direct-access': DirectAccess;
     'icon-button': IconButton;
     'pp-textfield': PpTextfield;
+    'type-card': TypeCard;
   }
 }
 
@@ -102,6 +112,7 @@ declare module "@stencil/core" {
       'direct-access': LocalJSX.DirectAccess & JSXBase.HTMLAttributes<HTMLDirectAccessElement>;
       'icon-button': LocalJSX.IconButton & JSXBase.HTMLAttributes<HTMLIconButtonElement>;
       'pp-textfield': LocalJSX.PpTextfield & JSXBase.HTMLAttributes<HTMLPpTextfieldElement>;
+      'type-card': LocalJSX.TypeCard & JSXBase.HTMLAttributes<HTMLTypeCardElement>;
     }
   }
 }

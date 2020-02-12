@@ -1,0 +1,54 @@
+//
+//
+//
+//
+.main-card {
+  height: 19rem;
+  width: 19rem;
+  padding: 24px;
+  background-color: #ffffff;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+  border: solid 1px #f3f2f2;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mdc-button {
+  min-width: 0 !important;
+}
+
+.text-css {
+  color: #000066;
+  font-size: 2rem;
+  font-family: Cartero;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.13;
+  letter-spacing: normal;
+}
+
+.line-css {
+  width: 256px;
+  height: 1px;
+  background-color: #ffcd00;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.text2-css {
+  font-family: Cartero;
+  font-size: 1rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: #333333;
+}
+
+button-css {
+  justify-content: flex-end;
+}
