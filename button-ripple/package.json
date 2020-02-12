@@ -21,20 +21,16 @@
     "test.watch": "stencil test --spec --e2e --watchAll",
     "generate": "stencil generate",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "test-jest": "jest"
+    "build-storybook": "build-storybook"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
     "@stencil/core": "^1.8.4",
     "@storybook/html": "^5.3.12",
-    "babel-loader": "^8.0.6",
-    "jest": "^25.1.0"
+    "babel-loader": "^8.0.6"
   },
   "license": "MIT",
   "dependencies": {
-    "@babel/preset-env": "^7.8.4",
-    "@babel/preset-typescript": "^7.8.3",
     "@material/button": "^4.0.0",
     "@material/fab": "^4.0.0",
     "@material/ripple": "^4.0.0",
@@ -44,7 +40,6 @@
     "@storybook/addon-actions": "^5.3.12",
     "@storybook/addon-knobs": "^5.3.12",
     "@storybook/addon-notes": "^5.3.12",
-    "@types/jest": "^25.1.2",
-    "babel-jest": "^25.1.0"
+    "@types/jest": "^25.1.2"
   }
 }
